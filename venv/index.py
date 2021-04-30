@@ -25,6 +25,4 @@ def raiz():
     return '{}'.format(lista)
 
 
-# print(my_list[2])
-
 app.run(debug=True)
