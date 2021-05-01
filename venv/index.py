@@ -1,7 +1,6 @@
 import glob
 import markdown
-from flask import Flask, render_template
-from jinja2 import Environment, BaseLoader
+from flask import Flask
 
 file_list = glob.glob(
     'E:/MeusProjetos/Projeto-Markdown/Markdown-e-Python/venv/docs/files/*.md*')
@@ -24,13 +23,7 @@ for file in glob.glob(path):
 
 @app.route('/')
 def raiz():
-
-    #template = Environment(loader=BaseLoader).from_string(lista)
-    # return '{}'.format(template.render(lista))
-
-    return render_template(lista)
-
-    # return '{}'.format(render_template(lista))
+    return '{}'.format(lista)
 
 
 app.run(debug=True)
